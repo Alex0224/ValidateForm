@@ -1,0 +1,300 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+
+body{
+    width: 100%;
+    background-image: url('../images/moon-4919501_1920.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.container-sign-up{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.formulairo{
+    margin-left: 5vw;
+    background-color: #1b2129;
+    display: block;
+    position: fixed;
+    border-radius: 10px;
+    width: 28vw;
+    height: 45vw;
+    box-shadow: 3px 5px 10px #000000;
+    margin-top: 2vw;
+}
+
+.tituloPrincipal{
+    display: block;
+    font-weight: 400;
+    text-align: center;
+    margin: .5vw;
+    font-size: 1.2vw;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    padding: .1vw;
+    margin-bottom: .8vw;
+}
+
+.inputs{
+    display: block;
+    margin-left: 1vw;
+    width: 22vw;
+    margin-right: auto;
+    margin-left: auto;
+    padding: .4vw;
+    margin-bottom: .1vw;
+}
+
+.inputs input{
+    display: inline-flex;
+    float: right;
+    padding: .1vw;
+    color: #000000;
+}
+
+input[type="date"]{
+    width: 9vw;
+    height: 1.3vw;
+    color: rgba(0, 0, 0, .6);
+}
+
+.areaSexo{
+    display: block; 
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+.areaSexo input{
+    display: inline;
+    margin-left: 5vw;
+    margin-right: 3vw;
+}
+
+#sexo{
+    margin-right: .3vw;
+}
+
+
+.TimePreferido{
+    display: block;
+    margin-left: 1vw;
+    width: 22vw;
+    margin-right: auto;
+    margin-left: auto;
+    padding: .4vw;
+    margin-bottom: .4vw;
+}
+
+.TimePreferido select{
+    display: inline-flex;
+    float: right;
+    padding: .1vw;
+    width: 9vw;
+    color: #000000;
+    margin-bottom: 1vw;
+}
+
+.TimePreferido select option{
+    color: #000000;
+}
+
+.mask-cpf{
+    display: block;
+    margin-left: 1vw;
+    width: 22vw;
+    margin-right: auto;
+    margin-left: auto;
+    padding: .4vw;
+    margin-bottom: .4vw;
+}
+
+.planos{
+    display: block;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.planos input{
+    display: inline;
+    margin-left: 2vw;
+    margin-right: .2vw;
+    margin-bottom: .6vw;
+}
+
+.areaPlanos h3{
+    display: block;
+    margin-left: 10vw;
+    margin-bottom: .2vw;
+    margin-top: 0.1vw;
+}
+
+.planos p{
+    display: inline-block;
+}
+
+.modalPlanos{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: block;
+    visibility: visible;
+    position: absolute;
+    left: 200vw;
+}
+
+.container-modal{
+    width: 30vw;
+    margin-left: auto;
+    margin-top: 10vw;
+    background-color: #2b3747;
+    padding: .8vw 1vw 2vw 1vw;
+    border-radius: 4px;
+    margin-right: auto;
+}
+
+.container-modal h3{
+    color: #2b3747;
+}
+
+.BtnReturn{
+    color: #ffffff;
+    width: 6vw;
+    height: 1.8vw;
+    right: 1vw;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1.3vw;
+    background-color: #481bc5;
+    border: none;
+    margin-left: 40%;
+    margin-top: 1vw;
+}
+
+.BtnReturn:hover{
+    background: linear-gradient(to right, #341686, #160449);
+}
+
+.container-modal li{
+    color: #2b3747;
+}
+
+.BtnSaibaMais{
+    color: #ffffff;
+    width: 6vw;
+    height: 1.8vw;
+    float: right;
+    top: -3.9vw;
+    right: 1vw;
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1vw;
+    background-color: #481bc5;
+    border: none;
+}
+
+.BtnSaibaMais:hover{
+    background: linear-gradient(to right, #341686, #160449);
+}
+
+.planosPremiere{
+    display: inline-block;
+    width: 25%;
+    margin-top: .5vw;
+    height: 100%;
+    text-align: center;
+}
+
+.InputsPremiere {
+    display: inline;
+    top: -1.5vw;
+    margin-left: 3vw;
+    position: relative;
+}
+
+.TextPremiere{
+    display: inline;
+    position: relative;
+    top: -1.5vw;
+}
+
+.areaPremiere{
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    top: -2vw;
+    height: 4vw;
+}
+
+.InputsPremiere2{
+    display: inline;
+    top: -2.4vw;
+    margin-left: 10.2vw;
+    position: relative; 
+}
+
+.TextPremiere2{
+    display: inline;
+    position: relative;
+    top: -2.4vw;
+}
+
+h5{
+    text-align: center;
+}
+
+.areaLogin{
+    position: relative;
+    top: -2vw;
+}
+
+.BtnValidar{
+    display: inline-block;
+    background-color: rgb(10, 131, 187);
+    border: none;
+    height: 2.3vw;
+    font-size: 1vw;
+    border-radius: 12px;
+    width: 10vw;
+    margin-left: 4vw;
+    margin-top: 1vw;
+    margin-right: 1vw;
+    cursor: pointer;
+}
+
+.BtnValidar:hover{
+    background-color: rgb(5, 54, 77);
+    transition: ease .4s;
+}
+
+.BtnAssinar{
+    display: inline-block;
+    background-color: rgb(43, 105, 7);
+    border: none;
+    height: 2.3vw;
+    font-size: 1vw;
+    border-radius: 12px;
+    width: 6vw;
+    cursor: pointer;
+}
+
+.BtnAssinar:hover{
+    background-color: rgb(19, 46, 3);
+    transition: ease .4s;
+}
+
+#TotalMensal{
+    color: #000000;
+}

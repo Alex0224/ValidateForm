@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Cadastro Para Assinantes</title>
+</head>
+
+<body>
+    <main class="container-sign-up">
+        <form name="form" id="form" class="formulairo">
+            <h3 class="tituloPrincipal">Cadastro de Assinantes - Canais de Esporte</h3>
+            <label class="inputs" for="nome">Nome: <input type="text" name="nome" id="nome" autocomplete="off" placeholder="Insira seu nome."></label>
+            <label class="inputs" for="cpf">CPF: <input type="text" name="cpf" class="cpf" id="cpf" placeholder="CPF. (Apenas números)" autocomplete="off" required></label>
+            <label class="inputs" for="email">Email: <input type="email" name="email" id="email" placeholder="Insira um email válido." autocomplete="off"></label>
+            <label class="inputs" for="cel">Celular: <input type="text" name="cel" id="cel" class="cel" required placeholder="(xx) xxxxx-xxxx" autocomplete="off"></label>
+            <label class="inputs" for="nascimento">Data Nascimento: <input type="date" name="nascimento" id="nascimento" required autocomplete="off"></label>
+            <label class="inputs" for="salario">Salário: <input type="text" name="salario" class="money" id="salario" placeholder="Insira seu salário." autocomplete="off" required></label>
+            <div class="areaSexo">
+                <label class="sexo" for="sexo" required>
+                    <input type="radio" name="sexo" id="sexo" value="Masculino">Masculino
+                    <input type="radio" name="sexo" id="sexo" value="Feminino">Feminino
+                </label>
+            </div>
+            <label class="TimePreferido" for="futebol">Time de Futebol:
+                <select name="times" required>
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="Corinthians">Corinthians</option>
+                    <option value="Palmeiras">Palmeiras</option>
+                    <option value="Santos">Santos</option>
+                    <option value="São Paulo">São Paulo</option>
+                </select>
+            </label>
+            
+                <label class="planos" for="planos">
+                    <div class="areaPlanos">
+                        <h3>Planos:</h3>
+                        <input type="radio" name="planos" id="planos" value="Mensal" onclick="totaliza()"><p>Mensal - R$ 85,00</p> <br>
+                        <input type="radio" name="planos" id="planos" value="Quadrimestral" onclick="totaliza()"><p>Quadrimestral - R$ 300,00</p> <br>
+                        <input type="radio" name="planos" id="planos" value="Anual" onclick="totaliza()"><p>Anual - R$ 600,00</p> <br>
+                        <input class="BtnSaibaMais" onclick="abrirModalSaibaMais()" type="button" value="Saiba Mais">
+                    </div>
+                    
+                </label>
+
+                
+                <label class="areaPremiere" for="premiere">
+                    <h3 class="planosPremiere">Planos Premieres</h3>
+                    <input class="InputsPremiere" type="radio" name="premiere" id="premiere" value="Economico" onclick="totaliza()"> <p class="TextPremiere">Econômico - 12 x R$ 60,00</p> <br>
+                    <input class="InputsPremiere2" type="radio" name="premiere" id="premiere" value="Controle" onclick="totaliza()"> <p class="TextPremiere2">Controle - Mensal R$ 80,00</p>
+                </label>
+                <div class="areaLogin">
+                    <label class="Inputs" for="total">Total (mensal):<input type="text" name="total" id="total" placeholder="teste" readonly></label>
+                    <h5>Para logar, informe seu login: </h5>
+                    <label class="Inputs" for="login">Login: <input type="text" name="login" id="login" autocomplete="off" placeholder="Usuario"></label>
+                    <label class="Inputs" for="senha">Senha: <input type="password" name="senha" id="senha" autocomplete="off" placeholder="Abc$123"></label>
+                    <button class="BtnValidar" onclick="validar_tudo()" type="button">Validar Formulário</button>
+                    <input class="BtnAssinar" type="button" name="BtnAssinar" id="BtnAssinar" value="Assinar">
+                </div>
+            </form>
+
+            <div class="modalPlanos" id="modalPlanos">
+                <div class="container-modal">
+                    <div id="acordeon">
+                        <h3>Plano Mensal</h3>
+                            <div>
+                                <ul>
+                                    <li>ESPN</li>
+                                    <li>Fox Sports</li>
+                                    <li>Sport TV</li>
+                                </ul>
+                            </div>
+                        <h3>Plano Quadrimestral</h3>
+                            <div>
+                                <ul>
+                                    <li>ESPN</li>
+                                    <li>Fox Sports 2</li>
+                                    <li>Sport TV 2</li>
+                                </ul>
+                            </div>
+                        <h3>Plano Anual</h3>
+                            <div>
+                                <ul>
+                                    <li>ESPN 2</li>
+                                    <li>Fox Sports 2</li>
+                                    <li>Sport TV 2 e 3</li>
+                                </ul>
+                            </div>
+                        </div>
+                    <button class="BtnReturn" onclick="fecharModalSaibaMais()" type="button">Voltar</button>
+                </div>
+            </div>
+
+    </main>
+    <script src="javascript/script.js"></script>
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css " rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.min.js"></script>
+    <!--Construção do efeito ACCORDION (ACORDEON) do JQUERY UI-->
+    <script>
+        $(function () {
+            $("#acordeon").accordion({
+                active: false,
+                collapsible: true
+            });
+        });
+    </script>
+    <script type="text/javascript">  
+        $(function() {
+        $('.cpf').mask('999.999.999-99'); 
+        $('.cel').mask('(00) 00000-0000')
+        $('.money').mask('R$ 9999');
+        });
+      </script>
+</body>
+
+</html>
